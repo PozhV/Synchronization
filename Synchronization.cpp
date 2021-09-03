@@ -1,9 +1,5 @@
-//============================================================================
-// Name        : TrueConf1.cpp
+// Name        : Synchronization.cpp
 // Author      : Vsevolod Pozhalostin
-// Version     :
-// Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
 //============================================================================
 #include <iostream>
 #include <map>
@@ -44,8 +40,8 @@ void Identify_Location(T& container, Location loc, const int value)
 		container[value] = Location::In_Both_Containers;
 	}
 }
-template<class T>
-void Generate_Random_Elements(T& container, int N)
+template<class C>
+void Generate_Random_Elements(C& container, int N)
 {
     std::random_device rd;
     std::mt19937 gen(rd());
